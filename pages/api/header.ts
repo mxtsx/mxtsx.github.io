@@ -15,7 +15,7 @@ export default function handler(
           cz: "Domů",
           hr: "Početna stranica"
         },
-        path: "/",
+        path: "/homepage",
         id: 1
       },
       {

@@ -1,20 +1,8 @@
-import {
-    HeaderActionsType,
-    HeaderEnums,
-    HeaderReducerStateType,
-    IHeader,
-    IHeaderBlock
-} from "../../../types/header.types";
+import {HeaderActionsType, HeaderEnums, HeaderReducerStateType, IHeaderBlock} from "../../../types/header.types";
 
 export const headerInitialState = {
     navbarText: [] as [] | IHeaderBlock[],
-    selectLabel: {
-        eng: "Lang",
-        ukr: "Мова",
-        rus: "Язык",
-        cz: "Jazyk",
-        hr: "Jezik"
-    }
+    selectPage: ''
 }
 
 const headerReducer = (state = headerInitialState, action: HeaderActionsType): HeaderReducerStateType => {
@@ -22,7 +10,12 @@ const headerReducer = (state = headerInitialState, action: HeaderActionsType): H
         case HeaderEnums.GET_HEADER_INFORMATION:
             return {
                 ...state,
-                navbarText: action.payload.navbarText.map(el => el)
+                navbarText: action.payload?.navbarText
+            }
+        case HeaderEnums.SET_SELECTED_PAGE:
+            return {
+                ...state,
+                selectPage: action.payload.page
             }
         default:
             return state

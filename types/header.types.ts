@@ -16,7 +16,8 @@ export interface IHeader {
 }
 
 export enum HeaderEnums {
-    GET_HEADER_INFORMATION = 'header/GET_HEADER_INFORMATION'
+    GET_HEADER_INFORMATION = 'header/GET_HEADER_INFORMATION',
+    SET_SELECTED_PAGE = 'header/SET_SELECTED_PAGE'
 }
 
 export type HeaderReducerStateType = typeof headerInitialState

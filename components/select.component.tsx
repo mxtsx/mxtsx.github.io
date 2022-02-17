@@ -1,7 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {LanguageType} from "../types/language.types";
 import {languageActions} from "../store/action-creators/language/language.action-creators";
 import {useDispatch} from "react-redux";
+import {useOutsideClick} from "../hooks/useOutsideClick";
+import {useTypedSelector} from "../hooks/useTypedSelector";
 
 const languages = [
     {lang: "eng", id: 1},
@@ -12,45 +14,50 @@ const languages = [
 ]
 
 export const Select: React.FC = () => {
-    const [value, setValue] = useState<LanguageType>('eng')
+    const {language} = useTypedSelector(state => state.language)
+
+    const [isOpen, setIsOpen] = useState<boolean>(false)
+    const [value, setValue] = useState<LanguageType>(language)
 
     const dispatch = useDispatch()
+    const wrapperRef = useRef(null)
 
-    const onValueChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setValue(e.target.value as LanguageType)
+    const onValueChangeHandler = (v: LanguageType) => {
+        setValue(v as LanguageType)
+        setIsOpen(!isOpen)
     }
+
+    useOutsideClick(wrapperRef, () => setIsOpen(false))
 
     useEffect(() => {
         dispatch(languageActions.languageChanged(value))
     }, [value])
 
     return (
-        <div className="flex justify-center items-center w-20">
-            <select className="
-                          form-select appearance-none
-                          block
-                          w-full
-                          px-3
-                          py-1.5
-                          text-base
-                          font-normal
-                          text-gray-700
-                          bg-white bg-clip-padding bg-no-repeat
-                          border border-solid border-gray-300
-                          rounded
-                          transition
-                          cursor-pointer
-                          ease-in-out
-                          m-0
-                          focus:text-gray-700
-                          focus:bg-white
-                          focus:border-green-500
-                          focus:outline-none
-                          "
-                    onChange={onValueChangeHandler}
-            >
-                {languages?.map(l => <option className={"after:cursor-pointer"} key={l.id} value={l.lang}>{l.lang}</option>)}
-            </select>
+        <div ref={wrapperRef} className={'z-50 flex flex-col md:hover:scale-105 transform transition ease-out duration-200'}>
+            <button data-dropdown-toggle="dropdown" onClick={() => setIsOpen(!isOpen)}
+                    className="text-white bg-gray-600 hover:bg-gray-500 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
+                    type="button">
+                {value}
+                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div
+                className={`${!isOpen ? 'hidden' : 'inline-flex'} bg-white absolute justify-center outline-none text-base list-none bg-white rounded divide-y divide-gray-100`}>
+                <ul aria-labelledby="dropdownButton">
+                    {languages?.map(l => {
+                        return (
+                            <li key={l.id} onClick={() => onValueChangeHandler(l.lang as LanguageType)}
+                                className="bg-white shadow cursor-pointer py-2 px-6 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                {l.lang}
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
         </div>
-    );
-};
+    )
+}

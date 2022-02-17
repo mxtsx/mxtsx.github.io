@@ -6,6 +6,7 @@ import contactReducer from "./reducers/contact/contact.reducer";
 import headerReducer from "./reducers/header/header.reducer";
 import homepageReducer from "./reducers/homepage/homepage.reducer";
 import languageReducer from "./reducers/language/language.reducer";
+import darkmodeReducer from "./reducers/darkmode/darkmode.reducer";
 
 const rootReducer = combineReducers({
     about: aboutReducer,
@@ -13,7 +14,7 @@ const rootReducer = combineReducers({
     header: headerReducer,
     homepage: homepageReducer,
     language: languageReducer,
-
+    darkmode: darkmodeReducer
 })
 
 const reducer = (state: any, action: any) => {

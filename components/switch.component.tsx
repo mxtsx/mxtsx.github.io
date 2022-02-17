@@ -1,10 +1,23 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {useDispatch} from "react-redux";
+import {darkmodeActions} from "../store/action-creators/darkmode/darkmode.action-creators";
+import {useTypedSelector} from "../hooks/useTypedSelector";
 
 export const Switch: React.FC = () => {
-    const [checked, setChecked] = useState(true)
+    const {isDarkMode} = useTypedSelector(state => state.darkmode)
+
+    const [checked, setChecked] = useState(isDarkMode)
+
+    const dispatch = useDispatch()
+
     const onCheckChangeHandler = () => {
         setChecked(prev => !prev)
     }
+
+    useEffect(() => {
+        dispatch(darkmodeActions.darkModeChanged(checked))
+    }, [checked])
+
     return (
         <div className="flex justify-center">
             <div className="form-check form-switch p-0">

@@ -1,5 +1,6 @@
 import React from 'react';
 import {MainLayout} from "../../layouts/main.layout";
+import {useTypedSelector} from "../../hooks/useTypedSelector";
 
 export const About = (
     // {about}: InferGetStaticPropsType<typeof getStaticProps>
@@ -10,10 +11,12 @@ export const About = (
     //     getAboutText(about)
     // }, [])
 
+    const {isDarkMode} = useTypedSelector(state => state.darkmode)
+
     return (
         <MainLayout>
             <div className={'pt-content-sm xs:pt-content'}>
-                Main
+                {isDarkMode ? 'dm' : '!dm'}
             </div>
         </MainLayout>
     );

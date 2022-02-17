@@ -19,8 +19,6 @@ export const HeaderComponent: React.FC = () => {
 
     const dispatch = useDispatch()
 
-    console.log(router)
-
     const {language} = useTypedSelector(state => state.language)
     const wrapperRef = useRef(null)
     useOutsideClick(wrapperRef, () => setIsOpen(false))

@@ -1,7 +1,7 @@
 import {HomepageActionsType, HomepageEnums, HomePageReducerStateType, IHomepage} from "../../../types/homepage.types";
 
 export const homepageInitialState = {
-    text: {} as {} | IHomepage
+    text: {} as IHomepage
 }
 
 const homepageReducer = (state = homepageInitialState, action: HomepageActionsType): HomePageReducerStateType => {

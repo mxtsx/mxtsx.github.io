@@ -1,26 +1,30 @@
-import React, {useEffect} from 'react';
-import {aboutApi} from "../../api/about.api";
-import {GetStaticProps, InferGetStaticPropsType} from "next";
-import {useActions} from "../../hooks/useActions";
+import React from 'react';
 import {MainLayout} from "../../layouts/main.layout";
+import {useTypedSelector} from "../../hooks/useTypedSelector";
+import {isMail} from "../../utils/isMail";
 
-export const About = ({about}: InferGetStaticPropsType<typeof getStaticProps>) => {
-    const {getAboutText} = useActions()
-
-    useEffect(() => {
-        getAboutText(about)
-    }, [])
+const Contacts = () => {
+    const {contacts} = useTypedSelector(state => state.contact)
+    const {isDarkMode} = useTypedSelector(state => state.darkmode)
 
     return (
         <MainLayout>
+            <div className={'w-full h-screen flex flex-col justify-center items-center'}>
+                <div className={'space-y-4'}>
+                    {contacts.map((m) => {
+                        return(
+                            <div key={m.id} className={'flex items-center space-x-3 hover:opacity-70'}>
+                                <a href={m.url} target={isMail(m.url) ? "_self" : "_blank"} rel={"noopener noreferrer"}>
+                                    <img src={m.image.src} alt={m.name} />
+                                </a>
+                                <a href={m.url} target={isMail(m.url) ? "_self" : "_blank"} className={`${!isDarkMode ? 'text-black' : 'text-gray-300'}`} rel={"noopener noreferrer"}>{m.name}</a>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
         </MainLayout>
     );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-    const res = await aboutApi.getAbout()
-    const about = res.status === 200 ? res.data : null
-    return {
-        props: {about}
-    }
-}
+export default Contacts

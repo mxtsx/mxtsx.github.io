@@ -5,18 +5,28 @@ import {GetStaticProps, InferGetStaticPropsType} from "next";
 import {headerApi} from "../api/header.api";
 import {useActions} from "../hooks/useActions";
 import {timer} from "../utils/timer.util";
+import Head from "next/head";
 
 export default function Home ({header}: InferGetStaticPropsType<typeof getStaticProps>) {
-    const {getHeaderInformation} = useActions()
+    const {getHeaderInformation, setIsLoading} = useActions()
 
     const router = useRouter()
 
     useEffect(() => {
+        setIsLoading(true)
         getHeaderInformation(header)
+        setIsLoading(false)
         timer(1000).then(() => router?.push('/homepage'))
     }, [])
 
-    return <Spinner />
+    return(
+        <>
+            <Head>
+                <title>Welcome</title>
+            </Head>
+            <Spinner />
+        </>
+    )
 }
 
 export const getStaticProps: GetStaticProps = async () => {

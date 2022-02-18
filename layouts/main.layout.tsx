@@ -3,13 +3,15 @@ import Head from "next/head";
 import {HeaderComponent} from "../components/header.component";
 import {useRouter} from "next/router";
 import {useTypedSelector} from "../hooks/useTypedSelector";
+import {Spinner} from "../components/spinner.component";
 
 interface IProps {
     keywords?: string;
 }
 
 export const MainLayout: React.FC<IProps> = ({keywords, children}) => {
-    const {selectPage} = useTypedSelector(state => state.header)
+    const {selectPage, isLoading} = useTypedSelector(state => state.header)
+    const {isDarkMode} = useTypedSelector(state => state.darkmode)
 
     const router = useRouter()
 
@@ -21,19 +23,22 @@ export const MainLayout: React.FC<IProps> = ({keywords, children}) => {
         }
     }, [])
 
+    if(isLoading || !navbarText.length) {
+        return <Spinner />
+    }
+
     return (
-        <>
+        <div style={{backgroundColor: `${!isDarkMode ? '#fdfdfd' : '#3f3f46'}`}}>
             <Head>
                 <title>{selectPage}</title>
                 <meta name={'keywords'} content={`Maksym Stepanets, Junior, React Developer, ${keywords}`}/>
             </Head>
             <HeaderComponent />
             <main
-                className={
-                'h-screen bg-white flex flex-col justify-start mx-auto items-center max-w-7xl shadow-md'
-            }>
+                style={{backgroundColor: `${!isDarkMode ? '#fafafa' : 'rgb(82 82 91)'}`}}
+                className={`min-h-screen h-min flex flex-col justify-start mx-auto items-center max-w-7xl shadow-md`}>
                 {children}
             </main>
-        </>
+        </div>
     )
 };

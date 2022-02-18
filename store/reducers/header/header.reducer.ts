@@ -1,6 +1,8 @@
 import {HeaderActionsType, HeaderEnums, HeaderReducerStateType, IHeaderBlock} from "../../../types/header.types";
 
 export const headerInitialState = {
+    isLoading: false,
+    error: null as string | null,
     navbarText: [] as [] | IHeaderBlock[],
     selectPage: ''
 }
@@ -16,6 +18,11 @@ const headerReducer = (state = headerInitialState, action: HeaderActionsType): H
             return {
                 ...state,
                 selectPage: action.payload.page
+            }
+        case HeaderEnums.SET_IS_LOADING:
+            return {
+                ...state,
+                isLoading: action.payload.isLoading
             }
         default:
             return state

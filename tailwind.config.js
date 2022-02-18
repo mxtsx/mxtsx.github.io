@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -6,7 +7,10 @@ module.exports = {
     './node_modules/tw-elements/dist/js/**/*.js'
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+      }
+    },
     screens: {
       'xs': '485px',
       'sm': '640px',

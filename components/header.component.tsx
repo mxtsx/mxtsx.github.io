@@ -19,6 +19,7 @@ export const HeaderComponent: React.FC = () => {
 
     const dispatch = useDispatch()
 
+    const {isDarkMode} = useTypedSelector(state => state.darkmode)
     const {language} = useTypedSelector(state => state.language)
     const wrapperRef = useRef(null)
     useOutsideClick(wrapperRef, () => setIsOpen(false))
@@ -28,9 +29,11 @@ export const HeaderComponent: React.FC = () => {
     }, [active, language])
 
     return (
-        <header ref={wrapperRef} className={'fixed-top flex flex-col bg-white justify-between mx-auto p-7 md:flex-row md:items-center max-w-7xl shadow-md z-30'}>
+        <header ref={wrapperRef}
+                style={{backgroundColor: `${!isDarkMode ? '#f4f4f5' : '#27272a'}`}}
+                className={`fixed-top flex flex-col justify-between mx-auto p-7 md:flex-row md:items-center max-w-7xl shadow-md z-30`}>
             <div className={'flex flex-col w-full justify-between items-center space-y-7 xs:space-y-0 xs:flex-row'}>
-                <div className={'flex flex-col'}>
+                <div className={`flex flex-col ${!isDarkMode ? 'text-black' : 'text-gray-300'}`}>
                     <h1 className={'whitespace-nowrap font-bold text-xl'}>Maksym Stepanets</h1>
                     <h2 className={'whitespace-nowrap'}>Junior React Developer</h2>
                 </div>
@@ -42,6 +45,7 @@ export const HeaderComponent: React.FC = () => {
             </div>
             <div className={
                 `${!isOpen ? 'hidden' : 'inline-flex'}
+                ${!isDarkMode ? 'text-black' : 'text-gray-300'}
                 flex-col
                 items-center 
                 justify-center 

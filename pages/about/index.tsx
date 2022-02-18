@@ -3,16 +3,23 @@ import {aboutApi} from "../../api/about.api";
 import {GetStaticProps, InferGetStaticPropsType} from "next";
 import {useActions} from "../../hooks/useActions";
 import {MainLayout} from "../../layouts/main.layout";
+import {useTypedSelector} from "../../hooks/useTypedSelector";
 
 export const About = ({about}: InferGetStaticPropsType<typeof getStaticProps>) => {
     const {getAboutText} = useActions()
+    const {text: info} = useTypedSelector(state => state.about)
+    const {language} = useTypedSelector(state => state.language)
+    const {isDarkMode} = useTypedSelector(state => state.darkmode)
 
     useEffect(() => {
         getAboutText(about)
     }, [])
 
     return (
-        <MainLayout title={'About'}>
+        <MainLayout>
+            <div className={`pt-content-sm xs:pt-content w-full min-h-screen h-min px-7 space-y-4 ${!isDarkMode ? 'text-black' : 'text-gray-300'}`}>
+                {info[language]?.description.map((d, i) => <div key={i}>{d}</div>)}
+            </div>
         </MainLayout>
     );
 };

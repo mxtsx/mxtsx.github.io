@@ -4,7 +4,7 @@ import {GetStaticProps, InferGetStaticPropsType} from "next";
 import {useActions} from "../../hooks/useActions";
 import {MainLayout} from "../../layouts/main.layout";
 
-export const About = ({about}: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Portfolio = ({about}: InferGetStaticPropsType<typeof getStaticProps>) => {
     const {getAboutText} = useActions()
 
     useEffect(() => {
@@ -16,6 +16,8 @@ export const About = ({about}: InferGetStaticPropsType<typeof getStaticProps>) =
         </MainLayout>
     );
 };
+
+export default Portfolio
 
 export const getStaticProps: GetStaticProps = async () => {
     const res = await aboutApi.getAbout()

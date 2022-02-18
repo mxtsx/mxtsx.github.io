@@ -11,19 +11,19 @@ export default function handler(
   res.status(200).json({
     contacts: [
       {
-        image: github.src,
+        image: github,
         url: "https://github.com/mxtsx",
         name: "Github",
         id: 1
       },
       {
-        image: linkedin.src,
+        image: linkedin,
         url: "https://www.linkedin.com/in/mxtsx/",
         name: "LinkedIn",
         id: 2
       },
       {
-        image: email.src,
+        image: email,
         url: "mailto: mxtsx@pm.me",
         name: "mxtsx@pm.me",
         id: 3

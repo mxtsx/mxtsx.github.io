@@ -1,19 +1,34 @@
-import github from "../../../public/github.svg"
-import linkedin from "../../../public/linkedin-round.svg"
-import email from "../../../public/email-round.svg"
-import {ContactActionsType, ContactEnums, ContactReducerStateType, IContacts} from "../../../types/contact.types";
+import {ContactReducerStateType} from "../../../types/contact.types";
+import github from "../../../public/github.svg";
+import linkedin from "../../../public/linkedin-round.svg";
+import email from "../../../public/email-round.svg";
+import {AnyAction} from "redux";
 
 export const contactInitialState = {
-    contacts: [] as [] | IContacts
+    contacts: [
+        {
+            image: github,
+            url: "https://github.com/mxtsx",
+            name: "Github",
+            id: 1
+        },
+        {
+            image: linkedin,
+            url: "https://www.linkedin.com/in/mxtsx/",
+            name: "LinkedIn",
+            id: 2
+        },
+        {
+            image: email,
+            url: "mailto: mxtsx@pm.me",
+            name: "mxtsx@pm.me",
+            id: 3
+        }
+    ]
 }
 
-const contactReducer = (state = contactInitialState, action: ContactActionsType): ContactReducerStateType => {
+const contactReducer = (state = contactInitialState, action: AnyAction): ContactReducerStateType => {
     switch (action.type) {
-        case ContactEnums.GET_CONTACT_INFORMATION:
-            return {
-                ...state,
-                contacts: action.payload.contacts as [] | IContacts
-            }
         default:
             return state
     }

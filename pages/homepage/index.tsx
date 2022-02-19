@@ -23,15 +23,15 @@ const Homepage = (
 
     return (
         <MainLayout>
-            <div className={`w-full h-screen flex flex-col justify-center items-center px-7`}>
+            <div className={`w-full h-screen flex flex-col justify-center items-center px-7 pt-9 space-y-5 xs:space-y-3 xs:pt-0`}>
                 <div className={`text-lg text-center xs:text-left ${!isDarkMode ? 'text-black' : 'text-gray-300'}`}>
                     <h3>{homepageInfo[language]?.greeting}</h3>
                     <h3>{homepageInfo[language]?.description}</h3>
                 </div>
-                <div className={'flex p-3 space-x-7'}>
+                <div className={'flex space-x-7'}>
                     {contacts?.map((m: IContact) => {
                         return (
-                            <a key={m.id} className={'hover:opacity-70'} href={m.url} target={isMail(m.url) ? "_self" : "_blank"} rel={"noopener noreferrer"}>
+                            <a key={m.id} className={'hover:opacity-70 md:hover:scale-110 transform transition ease-out duration-200'} href={m.url} target={isMail(m.url) ? "_self" : "_blank"} rel={"noopener noreferrer"}>
                                 <img src={m.image.src} alt={m.name}/>
                             </a>
                         )

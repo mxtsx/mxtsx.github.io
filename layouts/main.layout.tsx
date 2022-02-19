@@ -4,6 +4,7 @@ import {HeaderComponent} from "../components/header.component";
 import {useRouter} from "next/router";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 import {Spinner} from "../components/spinner.component";
+import {Main} from "../components/main.component";
 
 interface IProps {
     keywords?: string;
@@ -34,11 +35,9 @@ export const MainLayout: React.FC<IProps> = ({keywords, children}) => {
                 <meta name={'keywords'} content={`Maksym Stepanets, Junior, React Developer, ${keywords}`}/>
             </Head>
             <HeaderComponent />
-            <main
-                style={{backgroundColor: `${!isDarkMode ? '#fafafa' : 'rgb(82 82 91)'}`}}
-                className={`min-h-screen h-min flex flex-col justify-start mx-auto items-center max-w-7xl shadow-md`}>
+            <Main isDarkMode={isDarkMode}>
                 {children}
-            </main>
+            </Main>
         </div>
     )
 };

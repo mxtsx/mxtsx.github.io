@@ -9,30 +9,58 @@ export default function handler(
     text: [{
       id: 1,
       name: {
-        eng: "Business card website - old version",
-        ukr: "Сайт-візитка - стара версія",
-        rus: "Сайт-визитка - старая версия",
-        cz: "Webová vizitka - starší verze",
-        hr: "Poslovna web stranica - starija verzija"
+        eng: "Business card website - new version",
+        ukr: "Сайт-візитка - нова версія",
+        rus: "Сайт-визитка - новая версия",
+        cz: "Webová vizitka - nová verze",
+        hr: "Poslovna web stranica - nova verzija"
       },
       description: {
-        eng: "This page was made using React, Redux, Typescript and Material UI elements.",
-        ukr: "Ця сторінка була зроблена з використанням React, Redux, Typescript та елементів Material UI.",
-        rus: "Этот сайт был сделан с использованием React, Redux, Typescript и элементов Material UI.",
-        cz: "Tato stránka byla vytvořena s použitím React, Redux, Typescript a elementů Material UI.",
-        hr: "Ova stranica je stvorena pomoću React, Redux, Typescript i elementa Material UI."
+        eng: "This page was made using NextJS, React, Redux, Typescript and Tailwind.",
+        ukr: "Ця сторінка була зроблена з використанням NextJS, React, Redux, Typescript та Tailwind.",
+        rus: "Этот сайт был сделан с использованием NextJS, React, Redux, Typescript и элементов Tailwind.",
+        cz: "Tato stránka byla vytvořena s použitím NextJS, React, Redux, Typescript a Tailwind.",
+        hr: "Ova stranica je stvorena pomoću NextJS, React, Redux, Typescript i Tailwind."
       },
       url: "https://mxtsx.github.io",
       codeUrl: 'https://github.com/mxtsx/mxtsx.github.io',
       screenshots: [
-          '/mxtsx.github.io-old/main_page.png',
-          '/mxtsx.github.io-old/about_page.png',
-          '/mxtsx.github.io-old/portfolio_page.png',
-          '/mxtsx.github.io-old/contact_page.png'
+          '/mxtsx.github.io-new/main_page.png',
+          '/mxtsx.github.io-new/about_page.png',
+          '/mxtsx.github.io-new/portfolio_page.png',
+          '/mxtsx.github.io-new/project_page.png',
+          '/mxtsx.github.io-new/contact_page.png',
+          '/mxtsx.github.io-new/darkmode_page.png',
+          '/mxtsx.github.io-new/multilang_page.png',
       ]
     },
       {
         id: 2,
+        name: {
+          eng: "Business card website - old version",
+          ukr: "Сайт-візитка - стара версія",
+          rus: "Сайт-визитка - старая версия",
+          cz: "Webová vizitka - starší verze",
+          hr: "Poslovna web stranica - starija verzija"
+        },
+        description: {
+          eng: "This page was made using React, Redux, Typescript and Material UI elements.",
+          ukr: "Ця сторінка була зроблена з використанням React, Redux, Typescript та елементів Material UI.",
+          rus: "Этот сайт был сделан с использованием React, Redux, Typescript и элементов Material UI.",
+          cz: "Tato stránka byla vytvořena s použitím React, Redux, Typescript a elementů Material UI.",
+          hr: "Ova stranica je stvorena pomoću React, Redux, Typescript i elementa Material UI."
+        },
+        url: "https://mxtsx.github.io/mxtsx.github.io-old",
+        codeUrl: 'https://github.com/mxtsx/mxtsx.github.io-old',
+        screenshots: [
+          '/mxtsx.github.io-old/main_page.png',
+          '/mxtsx.github.io-old/about_page.png',
+          '/mxtsx.github.io-old/portfolio_page.png',
+          '/mxtsx.github.io-old/contact_page.png'
+        ]
+      },
+      {
+        id: 3,
         name: {
           eng: "Social Network",
           ukr: "Соціальна мережа",
@@ -87,6 +115,60 @@ export default function handler(
       },
       {
         id: 3,
+        name: {
+          eng: "Social Network",
+          ukr: "Соціальна мережа",
+          rus: "Социальная сеть",
+          cz: "Sociální síť",
+          hr: "Društvena mreža"
+        },
+        description: {
+          eng: "Page was made using React, Redux, Typescript, Formik, Axios, WebSocket and Ant Design elements.",
+          ukr: "Сторінка була створена з використанням React, Redux, Typescript, Formik, Axios, WebSocket та елементів Ant Design.",
+          rus: "Сайт был создан с использованием React, Redux, Typescript, Formik, Axios, WebSocket и элементов Ant Design.",
+          cz: "Stránka byla vytvořena s použitím React, Redux, Typescript, Formik, Axios, WebSocket a elementů Ant Design.",
+          hr: "Stranica je stvorena pomoću React, Redux, Typescript, Formik, Axios, WebSocket i elemenata Ant Design."
+        },
+        url: "https://mxtsx.github.io/sample-social-network",
+        codeUrl: 'https://github.com/mxtsx/sample-social-network',
+        notes: {
+          eng: [
+            "Login: free@samuraijs.com",
+            "Password: free",
+            "In the Safari browser: cookies - enabled; prevent cross-site tracking - disabled."
+          ],
+          ukr: [
+            "Логін: free@samuraijs.com",
+            "Пароль: free",
+            "У браузері Safari: кукіс - дозволені; не стежити між сайтами - вимкнено."
+          ],
+          rus: [
+            "Логин: free@samuraijs.com",
+            "Пароль: free",
+            "В браузере Safari: кукис - включены; без перекрестного отслеживания - выключено."
+          ],
+          cz: [
+            "Přihlašovací jméno: free@samuraijs.com",
+            "Heslo: free",
+            "V prohlížeči Safari: cookies - zapnuto; nasledovat napříč stránkami - vypnuto."
+          ],
+          hr: [
+            "Korisničko ime: free@samuraijs.com",
+            "Lozinka: free",
+            "U pregledniku Safari: cookies - uključeno; spriječi praćenje na više mj. - isključeno."
+          ]
+        },
+        screenshots: [
+          '/social_network-desktop/login_page.png',
+          '/social_network-desktop/profile_page.png',
+          '/social_network-desktop/edit_page.png',
+          '/social_network-desktop/users_page.png',
+          '/social_network-desktop/user_page.png',
+          '/social_network-desktop/chat_page.png'
+        ]
+      },
+      {
+        id: 4,
         name: {
           eng: "Social Network: Mobile App",
           ukr: "Соціальна мережа: Мобільний додаток",

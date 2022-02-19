@@ -7,12 +7,14 @@ import headerReducer from "./reducers/header/header.reducer";
 import homepageReducer from "./reducers/homepage/homepage.reducer";
 import languageReducer from "./reducers/language/language.reducer";
 import darkmodeReducer from "./reducers/darkmode/darkmode.reducer";
+import portfolioReducer from "./reducers/portfolio/portfolio.reducer";
 
 const rootReducer = combineReducers({
     about: aboutReducer,
     contact: contactReducer,
     header: headerReducer,
     homepage: homepageReducer,
+    portfolio: portfolioReducer,
     language: languageReducer,
     darkmode: darkmodeReducer
 })

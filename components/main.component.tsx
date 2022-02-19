@@ -17,17 +17,17 @@ export const Main: React.FC<IProps> = ({isDarkMode, children}) => {
             className={`
             min-h-screen
             h-min 
-            flex 
-            flex-col 
-            justify-start 
-            mx-auto 
-            items-center 
-            max-w-7xl 
+            max-w-7xl
+            mx-auto
             shadow-md
             `}>
             <div className={`
             h-full
             w-full
+            flex 
+            flex-col 
+            justify-start 
+            items-center
             ${!isLoaded ? 'opacity-0' : 'opacity-100'}
             transition-opacity
             ease-out

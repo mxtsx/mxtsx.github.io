@@ -4,7 +4,7 @@ import {Dispatch} from "redux";
 import {portfolioActions} from "../store/action-creators/portfolio/portfolio.action-creators";
 import {ILanguages} from "./types";
 
-interface IPortfolioItem {
+export interface IPortfolioItem {
     id: number,
     name: ILanguages,
     description: ILanguages,

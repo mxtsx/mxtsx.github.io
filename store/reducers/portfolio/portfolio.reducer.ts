@@ -1,12 +1,12 @@
 import {
-    IPortfolio,
+    IPortfolioItem,
     PortfolioActionsType,
     PortfolioEnum,
     PortfolioReducerStateType
 } from "../../../types/portfolio.types";
 
 export const portfolioInitialState = {
-    text: [] as [] | IPortfolio
+    text: [] as IPortfolioItem[]
 }
 
 const portfolioReducer = (state = portfolioInitialState, action: PortfolioActionsType): PortfolioReducerStateType => {
@@ -14,7 +14,7 @@ const portfolioReducer = (state = portfolioInitialState, action: PortfolioAction
         case PortfolioEnum.GET_PORTFOLIO_INFORMATION:
             return {
                 ...state,
-                text: action.payload.text as [] | IPortfolio
+                text: action?.payload?.text?.map(el => el) as IPortfolioItem[]
             }
         default:
             return state

@@ -2,11 +2,12 @@ import React from 'react';
 
 interface IProps {
     isOpen: boolean,
-    setIsOpen: (isOpen: boolean) => void
+    setIsOpen: (isOpen: boolean) => void,
+    isDarkMode: boolean
 }
 
-export const BurgerButton: React.FC<IProps> = ({isOpen, setIsOpen}) => {
-    const genericHamburgerLine = `h-1 w-8 my-1 rounded-full bg-black transition ease transform duration-300`;
+export const BurgerButton: React.FC<IProps> = ({isOpen, setIsOpen, isDarkMode}) => {
+    const genericHamburgerLine = `h-1 w-8 my-1 rounded-full ${!isDarkMode ? 'bg-black' : 'bg-gray-300'} transition ease transform duration-300`;
 
     return (
         <button

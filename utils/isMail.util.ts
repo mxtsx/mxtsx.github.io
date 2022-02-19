@@ -1,5 +1,5 @@
 type IsMailType = (str: string) => boolean
 
-export const isMail: IsMailType = (str) => {
+export const isMailUtil: IsMailType = (str) => {
     return str.split(':')[0] === 'mailto'
 }

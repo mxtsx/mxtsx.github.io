@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import {IAboutText} from "../../types/about.types";
+import type {NextApiRequest, NextApiResponse} from 'next'
 import {IPortfolio} from "../../types/portfolio.types";
 
 export default function handler(
@@ -10,11 +9,11 @@ export default function handler(
     text: [{
       id: 1,
       name: {
-        eng: "Business card website",
-        ukr: "Сайт-візитка",
-        rus: "Сайт-визитка",
-        cz: "Webová vizitka",
-        hr: "Poslovna web stranica"
+        eng: "Business card website - old version",
+        ukr: "Сайт-візитка - стара версія",
+        rus: "Сайт-визитка - старая версия",
+        cz: "Webová vizitka - starší verze",
+        hr: "Poslovna web stranica - starija verzija"
       },
       description: {
         eng: "This page was made using React, Redux, Typescript and Material UI elements.",
@@ -25,6 +24,12 @@ export default function handler(
       },
       url: "https://mxtsx.github.io",
       codeUrl: 'https://github.com/mxtsx/mxtsx.github.io',
+      screenshots: [
+          '/mxtsx.github.io-old/main_page.png',
+          '/mxtsx.github.io-old/about_page.png',
+          '/mxtsx.github.io-old/portfolio_page.png',
+          '/mxtsx.github.io-old/contact_page.png'
+      ]
     },
       {
         id: 2,
@@ -70,7 +75,15 @@ export default function handler(
             "Lozinka: free",
             "U pregledniku Safari: cookies - uključeno; spriječi praćenje na više mj. - isključeno."
           ]
-        }
+        },
+        screenshots: [
+          '/social_network-desktop/login_page.png',
+          '/social_network-desktop/profile_page.png',
+          '/social_network-desktop/edit_page.png',
+          '/social_network-desktop/users_page.png',
+          '/social_network-desktop/user_page.png',
+          '/social_network-desktop/chat_page.png'
+        ]
       },
       {
         id: 3,
@@ -117,7 +130,20 @@ export default function handler(
             "Lozinka: Guest_Free_12345",
             "Aplikaciju možete pokrenuti na Androidu i iOS pomoću aplikacije Expo ili samo na Androidu nakon preuzimanja .apk datoteke."
           ]
-        }
+        },
+        screenshots: [
+          '/social_network-mobile/login_page.png',
+          '/social_network-mobile/profile_page.png',
+          '/social_network-mobile/edit_page.png',
+          '/social_network-mobile/menu_component.png',
+          '/social_network-mobile/users_list.png',
+          '/social_network-mobile/user_page.png',
+          '/social_network-mobile/dialogs_page.png',
+          '/social_network-mobile/dialog_page.png',
+          '/social_network-mobile/chat_page.png',
+          '/social_network-mobile/theme_page.png'
+        ],
+        isMobile: true
       }]
   })
 }

@@ -4,7 +4,7 @@ import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {GetStaticProps, InferGetStaticPropsType} from "next";
 import {useActions} from "../../hooks/useActions";
 import {homepageApi} from "../../api/homepage.api";
-import {isMail} from "../../utils/isMail";
+import {isMailUtil} from "../../utils/isMail.util";
 import {IContact} from "../../types/contact.types";
 
 const Homepage = (
@@ -31,7 +31,7 @@ const Homepage = (
                 <div className={'flex space-x-7'}>
                     {contacts?.map((m: IContact) => {
                         return (
-                            <a key={m.id} className={'hover:opacity-70 md:hover:scale-110 transform transition ease-out duration-200'} href={m.url} target={isMail(m.url) ? "_self" : "_blank"} rel={"noopener noreferrer"}>
+                            <a key={m.id} className={'hover:opacity-70 md:hover:scale-110 transform transition ease-out duration-200'} href={m.url} target={isMailUtil(m.url) ? "_self" : "_blank"} rel={"noopener noreferrer"}>
                                 <img src={m.image.src} alt={m.name}/>
                             </a>
                         )

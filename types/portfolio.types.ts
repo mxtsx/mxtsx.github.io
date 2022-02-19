@@ -17,7 +17,9 @@ export interface IPortfolioItem {
         rus: string[],
         cz: string[],
         hr: string[]
-    }
+    },
+    screenshots: string[],
+    isMobile?: boolean
 }
 
 export interface IPortfolio {

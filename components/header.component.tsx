@@ -40,7 +40,10 @@ export const HeaderComponent: React.FC = () => {
                 <div className={'flex items-center space-x-7 md:ml-auto'}>
                     <Select />
                     <Switch />
-                    <BurgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
+                    <BurgerButton
+                        isDarkMode={isDarkMode}
+                        isOpen={isOpen}
+                        setIsOpen={setIsOpen} />
                 </div>
             </div>
             <div className={

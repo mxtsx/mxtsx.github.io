@@ -23,6 +23,7 @@ const Project: React.FC = () => {
                         w-full 
                         mb-5 
                         cursor-grab
+                        shadow-md
                         sm:w-3/4
                         sm:hover:scale-105 
                         transform 

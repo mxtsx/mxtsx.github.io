@@ -25,7 +25,7 @@ export const Main: React.FC<IProps> = ({isDarkMode, children}) => {
             max-w-7xl 
             shadow-md
             ${!isLoaded ? 'opacity-0' : 'opacity-100'}
-            transition
+            transition-opacity
             ease-out
             duration-1000
             `}>

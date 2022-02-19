@@ -24,12 +24,17 @@ export const Main: React.FC<IProps> = ({isDarkMode, children}) => {
             items-center 
             max-w-7xl 
             shadow-md
+            `}>
+            <div className={`
+            h-full
+            w-full
             ${!isLoaded ? 'opacity-0' : 'opacity-100'}
             transition-opacity
             ease-out
             duration-1000
             `}>
-            {children}
+                {children}
+            </div>
         </main>
     );
 };

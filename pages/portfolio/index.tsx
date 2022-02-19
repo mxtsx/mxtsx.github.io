@@ -17,22 +17,27 @@ const Portfolio = ({portfolio}: InferGetStaticPropsType<typeof getStaticProps>) 
 
     return (
         <MainLayout>
-            <div className={'pt-content-sm xs:pt-content min-h-screen pb-5 h-min w-full flex flex-col items-center'}>
+            <div className={'pt-content-sm xs:pt-content min-h-screen pb-5 px-5 h-min w-full flex flex-col items-center'}>
                 {information.map(el => {
                     return(
                         <div className={`
-                        w-1/2 
+                        w-full
                         flex 
                         flex-col 
                         justify-center 
-                        items-center 
+                        items-center
+                        text-center
                         shadow
                         ${!isDarkMode ? 'text-black' : 'text-gray-300'}
                         py-4
                         px-5
                         m-3
+                        hover:opacity-70
                         space-y-3
                         cursor-pointer
+                        md:text-left
+                        md:hover:opacity-100
+                        md:w-1/2
                         md:hover:scale-105 
                         transform
                         transition-transform
@@ -44,12 +49,12 @@ const Portfolio = ({portfolio}: InferGetStaticPropsType<typeof getStaticProps>) 
                                 <h3 className={'font-bold text-lg'}>{el.name[language]}</h3>
                                 <h3 className={'italic'}>{el.description[language]}</h3>
                             </div>
-                            <div className={'flex flex-col items-center'}>
+                            <div className={'flex flex-col items-center text-center'}>
                                 <a className={'hover:text-gray-400'} href={el.url} target={"_blank"} rel={"noopener noreferrer"}>{el.url.substring(8)}</a>
-                                <a className={'hover:text-gray-400'} href={el.codeUrl} target={"_blank"} rel={"noopener noreferrer"}>Code source: {el?.codeUrl.substring(8)}</a>
+                                <a className={'hover:text-gray-400'} href={el.codeUrl} target={"_blank"} rel={"noopener noreferrer"}>Code source<span className={'hidden md:inline'}>: {el?.codeUrl.substring(8)}</span></a>
+                                {el.downloadUrl && <a className={'hover:text-gray-400'} href={el.downloadUrl} target={"_blank"} rel={"noopener noreferrer"}>Download</a>}
                             </div>
-                            <div className={'flex flex-col items-center text-sm font-bold'}>
-                                {el.downloadUrl && <a href={el.downloadUrl} target={"_blank"} rel={"noopener noreferrer"}>Download</a>}
+                            <div className={'flex flex-col items-center text-sm font-bold space-y-1'}>
                                 {el?.notes && el?.notes?.[language]?.map((m, index) => <span key={index}>{m}</span>)}
                             </div>
                         </div>

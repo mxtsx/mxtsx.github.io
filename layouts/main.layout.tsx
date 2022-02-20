@@ -7,10 +7,11 @@ import {Spinner} from "../components/spinner.component";
 import {Main} from "../components/main.component";
 
 interface IProps {
+    title?: string,
     keywords?: string;
 }
 
-export const MainLayout: React.FC<IProps> = ({keywords, children}) => {
+export const MainLayout: React.FC<IProps> = ({title, keywords, children}) => {
     const {selectPage, isLoading} = useTypedSelector(state => state.header)
     const {isDarkMode} = useTypedSelector(state => state.darkmode)
 
@@ -31,7 +32,9 @@ export const MainLayout: React.FC<IProps> = ({keywords, children}) => {
     return (
         <div style={{backgroundColor: `${!isDarkMode ? '#fdfdfd' : '#3f3f46'}`}}>
             <Head>
-                <title>{selectPage}</title>
+                {!!title
+                    ? <title>{title}</title>
+                    : <title>{selectPage}</title>}
                 <meta name={'keywords'} content={`Maksym Stepanets, Junior, React Developer, NextJS, Work, Freelance, ${keywords}`}/>
             </Head>
             <HeaderComponent />

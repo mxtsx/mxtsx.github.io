@@ -5,6 +5,7 @@ import {MainLayout} from "../../layouts/main.layout";
 import {portfolioApi} from "../../api/portfolio.api";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import Link from "next/link";
+import {Spinner} from "../../components/spinner.component";
 
 const Portfolio = ({portfolio}: InferGetStaticPropsType<typeof getStaticProps>) => {
     const {getPortfolioInformation} = useActions()
@@ -15,6 +16,10 @@ const Portfolio = ({portfolio}: InferGetStaticPropsType<typeof getStaticProps>) 
     useEffect(() => {
         getPortfolioInformation(portfolio)
     }, [])
+
+    if(!information.length) {
+        return <MainLayout><Spinner /></MainLayout>
+    }
 
     return (
         <MainLayout keywords={information?.join(" ")}>

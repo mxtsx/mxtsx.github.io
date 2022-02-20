@@ -6,6 +6,7 @@ import {useActions} from "../../hooks/useActions";
 import {homepageApi} from "../../api/homepage.api";
 import {isMailUtil} from "../../utils/isMail.util";
 import {IContact} from "../../types/contact.types";
+import {Spinner} from "../../components/spinner.component";
 
 const Homepage = (
     {homepage}: InferGetStaticPropsType<typeof getStaticProps>
@@ -20,6 +21,10 @@ const Homepage = (
     }, [])
 
     const {isDarkMode} = useTypedSelector(state => state.darkmode)
+
+    if(Object.keys(homepageInfo).length === 0) {
+        return <MainLayout><Spinner /></MainLayout>
+    }
 
     return (
         <MainLayout keywords={homepageInfo[language]?.description}>

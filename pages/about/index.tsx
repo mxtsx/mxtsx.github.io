@@ -4,6 +4,7 @@ import {GetStaticProps, InferGetStaticPropsType} from "next";
 import {useActions} from "../../hooks/useActions";
 import {MainLayout} from "../../layouts/main.layout";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
+import {Spinner} from "../../components/spinner.component";
 
 export const About = ({about}: InferGetStaticPropsType<typeof getStaticProps>) => {
     const {getAboutText} = useActions()
@@ -14,6 +15,10 @@ export const About = ({about}: InferGetStaticPropsType<typeof getStaticProps>) =
     useEffect(() => {
         getAboutText(about)
     }, [])
+
+    if(Object.keys(info).length === 0) {
+        return <MainLayout><Spinner /></MainLayout>
+    }
 
     return (
         <MainLayout keywords={info[language]?.description.join(" ")}>

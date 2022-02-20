@@ -6,7 +6,7 @@ interface IProps {
     isDarkMode: boolean
 }
 
-export const BurgerButton: React.FC<IProps> = ({isOpen, setIsOpen, isDarkMode}) => {
+export const BurgerButton: React.FC<IProps> = React.memo(({isOpen, setIsOpen, isDarkMode}) => {
     const genericHamburgerLine = `h-1 w-8 my-1 rounded-full ${!isDarkMode ? 'bg-black' : 'bg-gray-300'} transition ease transform duration-300`;
 
     return (
@@ -35,4 +35,4 @@ export const BurgerButton: React.FC<IProps> = ({isOpen, setIsOpen, isDarkMode}) 
             />
         </button>
     );
-};
+})

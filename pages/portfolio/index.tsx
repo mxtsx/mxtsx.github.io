@@ -7,7 +7,7 @@ import {Spinner} from "../../components/spinner.component";
 import {NextThunkDispatch, RootState, wrapper} from "../../store/store";
 import {getPortfolioInformation} from "../../store/action-creators/portfolio/portfolio.thunks";
 
-const Portfolio: NextPage<RootState> = () => {
+const Portfolio: NextPage<RootState> = React.memo(() => {
     const {text: information} = useTypedSelector(state => state.portfolio)
     const {language} = useTypedSelector(state => state.language)
     const {isDarkMode} = useTypedSelector(state => state.darkmode)
@@ -66,7 +66,7 @@ const Portfolio: NextPage<RootState> = () => {
             </div>
         </MainLayout>
     );
-};
+})
 
 export default Portfolio
 

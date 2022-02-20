@@ -4,7 +4,7 @@ interface IProps {
     isDarkMode: boolean
 }
 
-export const Main: React.FC<IProps> = ({isDarkMode, children, ...props}) => {
+export const Main: React.FC<IProps> = React.memo(({isDarkMode, children, ...props}) => {
     const [isLoaded, setIsLoaded] = useState(false)
     useEffect(() => {
         setTimeout(() => {
@@ -38,4 +38,4 @@ export const Main: React.FC<IProps> = ({isDarkMode, children, ...props}) => {
             </div>
         </main>
     );
-};
+})

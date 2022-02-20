@@ -8,7 +8,7 @@ import {Spinner} from "../../components/spinner.component";
 import {NextThunkDispatch, RootState, wrapper} from "../../store/store";
 import {getHomepageInformation} from "../../store/action-creators/homepage/homepage.thunks";
 
-const Homepage: NextPage<RootState> = () => {
+const Homepage: NextPage<RootState> = React.memo(() => {
     const {text: homepageInfo} = useTypedSelector(state => state.homepage)
     const {contacts} = useTypedSelector(state => state.contact)
     const {language} = useTypedSelector(state => state.language)
@@ -37,7 +37,7 @@ const Homepage: NextPage<RootState> = () => {
             </div>
         </MainLayout>
     );
-};
+})
 
 export default Homepage
 

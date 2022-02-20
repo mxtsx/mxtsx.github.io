@@ -3,7 +3,7 @@ import {useDispatch} from "react-redux";
 import {darkmodeActions} from "../store/action-creators/darkmode/darkmode.action-creators";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 
-export const Switch: React.FC = () => {
+export const Switch: React.FC = React.memo(() => {
     const {isDarkMode} = useTypedSelector(state => state.darkmode)
 
     const [checked, setChecked] = useState(isDarkMode)
@@ -52,4 +52,4 @@ export const Switch: React.FC = () => {
             </div>
         </div>
     );
-};
+})

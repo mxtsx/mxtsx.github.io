@@ -6,11 +6,10 @@ import {Spinner} from "../../components/spinner.component";
 import {NextThunkDispatch, RootState, wrapper} from "../../store/store";
 import {getAboutText} from "../../store/action-creators/about/about.thunks";
 
-export const About: NextPage<RootState> = () => {
+export const About: NextPage<RootState> = React.memo(() => {
     const {text: info} = useTypedSelector(state => state.about)
     const {language} = useTypedSelector(state => state.language)
     const {isDarkMode} = useTypedSelector(state => state.darkmode)
-    const {navbarText} = useTypedSelector(state => state.header)
 
     if(Object.keys(info).length === 0) {
         return <MainLayout><Spinner /></MainLayout>
@@ -23,7 +22,7 @@ export const About: NextPage<RootState> = () => {
             </div>
         </MainLayout>
     );
-};
+})
 
 export default About
 

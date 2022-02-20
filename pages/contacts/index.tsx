@@ -3,7 +3,7 @@ import {MainLayout} from "../../layouts/main.layout";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {isMailUtil} from "../../utils/isMail.util";
 
-const Contacts = () => {
+const Contacts = React.memo(() => {
     const {contacts} = useTypedSelector(state => state.contact)
     const {isDarkMode} = useTypedSelector(state => state.darkmode)
 
@@ -25,6 +25,6 @@ const Contacts = () => {
             </div>
         </MainLayout>
     );
-};
+})
 
 export default Contacts

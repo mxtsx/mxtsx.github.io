@@ -114,60 +114,6 @@ export default function handler(
         ]
       },
       {
-        id: 3,
-        name: {
-          eng: "Social Network",
-          ukr: "Соціальна мережа",
-          rus: "Социальная сеть",
-          cz: "Sociální síť",
-          hr: "Društvena mreža"
-        },
-        description: {
-          eng: "Page was made using React, Redux, Typescript, Formik, Axios, WebSocket and Ant Design elements.",
-          ukr: "Сторінка була створена з використанням React, Redux, Typescript, Formik, Axios, WebSocket та елементів Ant Design.",
-          rus: "Сайт был создан с использованием React, Redux, Typescript, Formik, Axios, WebSocket и элементов Ant Design.",
-          cz: "Stránka byla vytvořena s použitím React, Redux, Typescript, Formik, Axios, WebSocket a elementů Ant Design.",
-          hr: "Stranica je stvorena pomoću React, Redux, Typescript, Formik, Axios, WebSocket i elemenata Ant Design."
-        },
-        url: "https://mxtsx.github.io/sample-social-network",
-        codeUrl: 'https://github.com/mxtsx/sample-social-network',
-        notes: {
-          eng: [
-            "Login: free@samuraijs.com",
-            "Password: free",
-            "In the Safari browser: cookies - enabled; prevent cross-site tracking - disabled."
-          ],
-          ukr: [
-            "Логін: free@samuraijs.com",
-            "Пароль: free",
-            "У браузері Safari: кукіс - дозволені; не стежити між сайтами - вимкнено."
-          ],
-          rus: [
-            "Логин: free@samuraijs.com",
-            "Пароль: free",
-            "В браузере Safari: кукис - включены; без перекрестного отслеживания - выключено."
-          ],
-          cz: [
-            "Přihlašovací jméno: free@samuraijs.com",
-            "Heslo: free",
-            "V prohlížeči Safari: cookies - zapnuto; nasledovat napříč stránkami - vypnuto."
-          ],
-          hr: [
-            "Korisničko ime: free@samuraijs.com",
-            "Lozinka: free",
-            "U pregledniku Safari: cookies - uključeno; spriječi praćenje na više mj. - isključeno."
-          ]
-        },
-        screenshots: [
-          '/social_network-desktop/login_page.png',
-          '/social_network-desktop/profile_page.png',
-          '/social_network-desktop/edit_page.png',
-          '/social_network-desktop/users_page.png',
-          '/social_network-desktop/user_page.png',
-          '/social_network-desktop/chat_page.png'
-        ]
-      },
-      {
         id: 4,
         name: {
           eng: "Social Network: Mobile App",

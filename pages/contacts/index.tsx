@@ -8,7 +8,7 @@ const Contacts = () => {
     const {isDarkMode} = useTypedSelector(state => state.darkmode)
 
     return (
-        <MainLayout>
+        <MainLayout keywords={contacts.map(c => c.url).join(" ")}>
             <div className={'w-full h-screen flex flex-col justify-center items-center'}>
                 <div className={'space-y-4'}>
                     {contacts.map((m) => {

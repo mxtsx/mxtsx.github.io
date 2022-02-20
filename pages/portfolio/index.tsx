@@ -4,7 +4,7 @@ import {useActions} from "../../hooks/useActions";
 import {MainLayout} from "../../layouts/main.layout";
 import {portfolioApi} from "../../api/portfolio.api";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
-import Link from "next/Link";
+import Link from "next/link";
 
 const Portfolio = ({portfolio}: InferGetStaticPropsType<typeof getStaticProps>) => {
     const {getPortfolioInformation} = useActions()
@@ -17,7 +17,7 @@ const Portfolio = ({portfolio}: InferGetStaticPropsType<typeof getStaticProps>) 
     }, [])
 
     return (
-        <MainLayout>
+        <MainLayout keywords={information?.join(" ")}>
             <div className={'pt-content-sm xs:pt-content min-h-screen pb-5 px-5 h-min w-full flex flex-col items-center'}>
                 {information.map(el => {
                     return(

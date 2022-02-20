@@ -12,8 +12,6 @@ const Project: React.FC = () => {
     const project = information.find(p => !!id ? p.id === +id : undefined)
     const isImage = !!project?.screenshots?.[0]
 
-    console.log(project?.isMobile)
-
     return (
         <MainLayout>
             <div className={'relative w-full min-h-screen h-min pt-content-sm xs:pt-content px-4 flex flex-col items-center'}>
@@ -25,7 +23,8 @@ const Project: React.FC = () => {
                         cursor-grab
                         shadow-md
                         sm:w-3/4
-                        sm:hover:scale-105 
+                        sm:hover:scale-105
+                        sm:hover:z-10
                         transform 
                         transition 
                         ease-out 

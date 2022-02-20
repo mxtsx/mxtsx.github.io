@@ -22,7 +22,7 @@ const Homepage = (
     const {isDarkMode} = useTypedSelector(state => state.darkmode)
 
     return (
-        <MainLayout>
+        <MainLayout keywords={homepageInfo[language]?.description}>
             <div className={`w-full h-screen flex flex-col justify-center items-center px-7 pt-9 space-y-5 xs:space-y-3 xs:pt-0`}>
                 <div className={`text-lg text-center xs:text-left ${!isDarkMode ? 'text-black' : 'text-gray-300'}`}>
                     <h3>{homepageInfo[language]?.greeting}</h3>

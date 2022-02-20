@@ -32,7 +32,7 @@ export const MainLayout: React.FC<IProps> = ({keywords, children}) => {
         <div style={{backgroundColor: `${!isDarkMode ? '#fdfdfd' : '#3f3f46'}`}}>
             <Head>
                 <title>{selectPage}</title>
-                <meta name={'keywords'} content={`Maksym Stepanets, Junior, React Developer, ${keywords}`}/>
+                <meta name={'keywords'} content={`Maksym Stepanets, Junior, React Developer, NextJS, Work, Freelance, ${keywords}`}/>
             </Head>
             <HeaderComponent />
             <Main isDarkMode={isDarkMode}>

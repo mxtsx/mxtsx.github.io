@@ -16,7 +16,7 @@ export const About = ({about}: InferGetStaticPropsType<typeof getStaticProps>) =
     }, [])
 
     return (
-        <MainLayout>
+        <MainLayout keywords={info[language]?.description.join(" ")}>
             <div className={`pt-content-sm xs:pt-content w-full min-h-screen h-min px-7 pb-7 space-y-4 md:pb-0 ${!isDarkMode ? 'text-black' : 'text-gray-300'}`}>
                 {info[language]?.description.map((d, i) => <div key={i}>{d}</div>)}
             </div>

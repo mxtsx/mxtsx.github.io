@@ -17,7 +17,7 @@ const Portfolio: NextPage<RootState> = React.memo(() => {
     }
 
     return (
-        <MainLayout keywords={information?.join(" ")}>
+        <MainLayout keywords={information.map(el => `${el.name?.[language]} ${el.url} ${el.description?.[language]}`).join(" ")}>
             <div className={'pt-content-sm xs:pt-content min-h-screen pb-5 px-5 h-min w-full flex flex-col items-center'}>
                 {information.map(el => {
                     return(

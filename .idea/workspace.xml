@@ -5,159 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59edf26e-7f18-43b8-af22-c15de32aa5a7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mxtsx.github.io.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/about.api.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/api.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/homepage.api.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/portfolio.api.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/burger-button.component.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header.component.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main.component.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/select.component.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/spinner.component.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/switch.component.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useActions.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useOutsideClick.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useTypedSelector.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/main.layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/data/AIcwEPa7yOVO-zCwvpElF/about.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/data/AIcwEPa7yOVO-zCwvpElF/homepage.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/data/AIcwEPa7yOVO-zCwvpElF/portfolio.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/AIcwEPa7yOVO-zCwvpElF/_buildManifest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/AIcwEPa7yOVO-zCwvpElF/_middlewareManifest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/AIcwEPa7yOVO-zCwvpElF/_ssgManifest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/748-31164afe54a01829.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/framework-5f4595e5518b5600.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/main-a054bbf31fb90f6a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/pages/_app-fd3ac1116b4d583d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/pages/_error-2280fa386d040b66.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/pages/about-5c3d247e446b2093.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/pages/contacts-2dda7819974ea3a4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/pages/homepage-b96e9f52a961a416.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/pages/index-1044cfc2f8fc72cb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/pages/portfolio-265ce7ae90aa2c03.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/pages/portfolio/[id]-f9fb39c18ea1aacb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/polyfills-5cd94c89d3acac5f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/webpack-fd82975a6094609f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/css/5ed96c98414d62fd.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/media/email-round.9409875a.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/media/github.6df0e7d4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/_next/static/media/linkedin-round.093f9d15.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/contacts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/email-round.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/github.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/homepage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/linkedin-round.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/mxtsx.github.io-new/about_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/mxtsx.github.io-new/contact_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/mxtsx.github.io-new/darkmode_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/mxtsx.github.io-new/main_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/mxtsx.github.io-new/multilang_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/mxtsx.github.io-new/portfolio_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/mxtsx.github.io-new/project_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/mxtsx.github.io-old/about_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/mxtsx.github.io-old/contact_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/mxtsx.github.io-old/main_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/mxtsx.github.io-old/portfolio_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/portfolio.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/portfolio/[id].html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-desktop/chat_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-desktop/edit_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-desktop/login_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-desktop/profile_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-desktop/user_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-desktop/users_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-mobile/chat_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-mobile/dialog_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-mobile/dialogs_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-mobile/edit_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-mobile/login_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-mobile/menu_component.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-mobile/profile_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-mobile/theme_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-mobile/user_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/social_network-mobile/users_list.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prettier.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/email-round.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/github.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/linkedin-round.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mxtsx.github.io-new/about_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mxtsx.github.io-new/contact_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mxtsx.github.io-new/darkmode_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mxtsx.github.io-new/main_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mxtsx.github.io-new/multilang_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mxtsx.github.io-new/portfolio_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mxtsx.github.io-new/project_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mxtsx.github.io-old/about_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mxtsx.github.io-old/contact_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mxtsx.github.io-old/main_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mxtsx.github.io-old/portfolio_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-desktop/chat_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-desktop/edit_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-desktop/login_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-desktop/profile_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-desktop/user_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-desktop/users_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-mobile/chat_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-mobile/dialog_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-mobile/dialogs_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-mobile/edit_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-mobile/login_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-mobile/menu_component.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-mobile/profile_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-mobile/theme_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-mobile/user_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/social_network-mobile/users_list.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/action-creators/about/about.action-creators.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/action-creators/about/about.thunks.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/action-creators/darkmode/darkmode.action-creators.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/action-creators/header/header.action-creators.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/action-creators/homepage/homepage.action-creators.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/action-creators/homepage/homepage.thunks.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/action-creators/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/action-creators/language/language.action-creators.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/action-creators/portfolio/portfolio.action-creators.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/action-creators/portfolio/portfolio.thunks.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/reducers/about/about.reducer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/reducers/contact/contact.reducer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/reducers/darkmode/darkmode.reducer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/reducers/header/header.reducer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/reducers/homepage/homepage.reducer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/reducers/language/language.reducer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/reducers/portfolio/portfolio.reducer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/store.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/about.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/contact.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/darkmode.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/header.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/homepage.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/language.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/portfolio.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/isMail.util.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/screenshot-name.util.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/timer.util.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/portfolio/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/portfolio/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +46,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\react\\git\\mxtsx.github.io-new\\node_modules\\prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\react\\git\\mxtsx.github.io-new\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\WebStorm\\WebStorm 221.4165.163\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -253,6 +102,8 @@
       <workItem from="1645211623313" duration="7332000" />
       <workItem from="1645260402216" duration="21612000" />
       <workItem from="1645348128505" duration="22842000" />
+      <workItem from="1645376709569" duration="740000" />
+      <workItem from="1645388649163" duration="358000" />
     </task>
     <servers />
   </component>

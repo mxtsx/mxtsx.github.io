@@ -1,5 +1,5 @@
-import {applyMiddleware, combineReducers, createStore, Store} from "redux";
-import thunk from "redux-thunk";
+import {AnyAction, applyMiddleware, combineReducers, createStore, Store} from "redux";
+import thunk, {ThunkDispatch} from "redux-thunk";
 import {createWrapper, HYDRATE} from 'next-redux-wrapper';
 import aboutReducer from "./reducers/about/about.reducer";
 import contactReducer from "./reducers/contact/contact.reducer";
@@ -21,10 +21,15 @@ const rootReducer = combineReducers({
 
 const reducer = (state: any, action: any) => {
     if (action.type === HYDRATE) {
-        return {
+        const nextState = {
             ...state,
             ...action.payload,
-        };
+        }
+        if (state) {
+            nextState.language.language = state.language.language
+            nextState.darkmode.isDarkMode = state.darkmode.isDarkMode
+        }
+        return nextState
     } else {
         return rootReducer(state, action);
     }
@@ -36,3 +41,4 @@ export const wrapper = createWrapper<Store<RootState>>(makeStore, {debug: true})
 
 export type RootState = ReturnType<typeof rootReducer>
 export type InferActionsTypes<T> = T extends {[key: string]: (...args:any[]) => infer U} ? U : never
+export type NextThunkDispatch = ThunkDispatch<RootState, void, AnyAction>

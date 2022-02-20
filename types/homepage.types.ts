@@ -17,7 +17,7 @@ export interface IHomepage {
 }
 
 export enum HomepageEnums {
-    GET_HOMEPAGE_INFORMATION = 'homepage/GET_HOMEPAGE_INFORMATION'
+    GET_HOMEPAGE_INFORMATION = 'homepage/GET_HOMEPAGE_INFORMATION',
 }
 
 export type HomePageReducerStateType = typeof homepageInitialState

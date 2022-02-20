@@ -1,12 +1,12 @@
-import React, {useLayoutEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 interface IProps {
     isDarkMode: boolean
 }
 
-export const Main: React.FC<IProps> = ({isDarkMode, children}) => {
+export const Main: React.FC<IProps> = ({isDarkMode, children, ...props}) => {
     const [isLoaded, setIsLoaded] = useState(false)
-    useLayoutEffect(() => {
+    useEffect(() => {
         setTimeout(() => {
             setIsLoaded(true)
         })
@@ -32,7 +32,8 @@ export const Main: React.FC<IProps> = ({isDarkMode, children}) => {
             transition-opacity
             ease-out
             duration-1000
-            `}>
+            `}
+                 {...props}>
                 {children}
             </div>
         </main>

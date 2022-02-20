@@ -10,8 +10,8 @@ import {useOutsideClick} from "../hooks/useOutsideClick";
 import {useRouter} from "next/router";
 
 export const HeaderComponent: React.FC = () => {
-    const {navbarText} = useTypedSelector(state => state.header)
     const router = useRouter()
+    const {navbarText} = useTypedSelector(state => state.header)
     const currentId = navbarText?.find(el => el?.path === router?.asPath)?.id as number
 
     const [active, setActive] = useState<number>(currentId)

@@ -1,25 +1,17 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {MainLayout} from "../../layouts/main.layout";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
-import {GetStaticProps, InferGetStaticPropsType} from "next";
-import {useActions} from "../../hooks/useActions";
-import {homepageApi} from "../../api/homepage.api";
+import {GetStaticProps, NextPage} from "next";
 import {isMailUtil} from "../../utils/isMail.util";
 import {IContact} from "../../types/contact.types";
 import {Spinner} from "../../components/spinner.component";
+import {NextThunkDispatch, RootState, wrapper} from "../../store/store";
+import {getHomepageInformation} from "../../store/action-creators/homepage/homepage.thunks";
 
-const Homepage = (
-    {homepage}: InferGetStaticPropsType<typeof getStaticProps>
-) => {
-    const {getHomepageInformation} = useActions()
+const Homepage: NextPage<RootState> = () => {
     const {text: homepageInfo} = useTypedSelector(state => state.homepage)
     const {contacts} = useTypedSelector(state => state.contact)
     const {language} = useTypedSelector(state => state.language)
-
-    useEffect(() => {
-        getHomepageInformation(homepage)
-    }, [])
-
     const {isDarkMode} = useTypedSelector(state => state.darkmode)
 
     if(Object.keys(homepageInfo).length === 0) {
@@ -49,10 +41,10 @@ const Homepage = (
 
 export default Homepage
 
-export const getStaticProps: GetStaticProps = async () => {
-    const res = await homepageApi.getHomepage()
-    const homepage = res.status === 200 ? res.data : null
+export const getStaticProps: GetStaticProps = wrapper.getStaticProps(store => async () => {
+    const dispatch = store.dispatch as NextThunkDispatch
+    await dispatch(getHomepageInformation());
     return {
-        props: {homepage}
+        props: {}
     }
-}
+});

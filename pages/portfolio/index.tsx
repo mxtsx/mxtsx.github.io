@@ -1,21 +1,16 @@
-import React, {useEffect} from 'react';
-import {GetStaticProps, InferGetStaticPropsType} from "next";
-import {useActions} from "../../hooks/useActions";
+import React from 'react';
+import {GetStaticProps, NextPage} from "next";
 import {MainLayout} from "../../layouts/main.layout";
-import {portfolioApi} from "../../api/portfolio.api";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import Link from "next/link";
 import {Spinner} from "../../components/spinner.component";
+import {NextThunkDispatch, RootState, wrapper} from "../../store/store";
+import {getPortfolioInformation} from "../../store/action-creators/portfolio/portfolio.thunks";
 
-const Portfolio = ({portfolio}: InferGetStaticPropsType<typeof getStaticProps>) => {
-    const {getPortfolioInformation} = useActions()
+const Portfolio: NextPage<RootState> = () => {
     const {text: information} = useTypedSelector(state => state.portfolio)
     const {language} = useTypedSelector(state => state.language)
     const {isDarkMode} = useTypedSelector(state => state.darkmode)
-
-    useEffect(() => {
-        getPortfolioInformation(portfolio)
-    }, [])
 
     if(!information.length) {
         return <MainLayout><Spinner /></MainLayout>
@@ -75,10 +70,10 @@ const Portfolio = ({portfolio}: InferGetStaticPropsType<typeof getStaticProps>) 
 
 export default Portfolio
 
-export const getStaticProps: GetStaticProps = async () => {
-    const res = await portfolioApi.getPortfolio()
-    const portfolio = res.status === 200 ? res.data : null
+export const getStaticProps: GetStaticProps = wrapper.getStaticProps(store => async () => {
+    const dispatch = store.dispatch as NextThunkDispatch
+    await dispatch(getPortfolioInformation());
     return {
-        props: {portfolio}
+        props: {}
     }
-}
+});

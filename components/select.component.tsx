@@ -13,7 +13,7 @@ const languages = [
     {lang: "hr", id: 5},
 ]
 
-export const Select: React.FC = () => {
+export const Select: React.FC = React.memo(() => {
     const {language} = useTypedSelector(state => state.language)
     const {isDarkMode} = useTypedSelector(state => state.darkmode)
 
@@ -77,4 +77,4 @@ export const Select: React.FC = () => {
             </div>
         </div>
     )
-}
+})

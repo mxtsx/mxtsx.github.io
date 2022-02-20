@@ -52,9 +52,9 @@ const Portfolio: NextPage<RootState> = React.memo(() => {
                                     <h3 className={'italic'}>{el.description[language]}</h3>
                                 </div>
                                 <div className={'flex flex-col items-center text-center'}>
-                                    <a className={'hover:text-gray-400'} href={el.url} target={"_blank"} rel={"noopener noreferrer"}>{el.url.substring(8)}</a>
-                                    <a className={'hover:text-gray-400'} href={el.codeUrl} target={"_blank"} rel={"noopener noreferrer"}>Code source<span className={'hidden md:inline'}>: {el?.codeUrl.substring(8)}</span></a>
-                                    {el.downloadUrl && <a className={'hover:text-gray-400'} href={el.downloadUrl} target={"_blank"} rel={"noopener noreferrer"}>Download</a>}
+                                    <a className={'hover:text-gray-400'} onClick={(e) => e.stopPropagation()} href={el.url} target={"_blank"} rel={"noopener noreferrer"}>{el.url.substring(8)}</a>
+                                    <a className={'hover:text-gray-400'} onClick={(e) => e.stopPropagation()} href={el.codeUrl} target={"_blank"} rel={"noopener noreferrer"}>Code source<span className={'hidden md:inline'}>: {el?.codeUrl.substring(8)}</span></a>
+                                    {el.downloadUrl && <a className={'hover:text-gray-400'} onClick={(e) => e.stopPropagation()} href={el.downloadUrl} target={"_blank"} rel={"noopener noreferrer"}>Download</a>}
                                 </div>
                                 <div className={'flex flex-col items-center text-sm font-bold space-y-1'}>
                                     {el?.notes && el?.notes?.[language]?.map((m, index) => <span key={index}>{m}</span>)}

@@ -18,7 +18,7 @@ export default function handler(
       description: {
         eng: "This page was made using NextJS, React, Redux, Typescript and Tailwind.",
         ukr: "Ця сторінка була зроблена з використанням NextJS, React, Redux, Typescript та Tailwind.",
-        rus: "Этот сайт был сделан с использованием NextJS, React, Redux, Typescript и элементов Tailwind.",
+        rus: "Этот сайт был сделан с использованием NextJS, React, Redux, Typescript и Tailwind.",
         cz: "Tato stránka byla vytvořena s použitím NextJS, React, Redux, Typescript a Tailwind.",
         hr: "Ova stranica je stvorena pomoću NextJS, React, Redux, Typescript i Tailwind."
       },

@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59edf26e-7f18-43b8-af22-c15de32aa5a7" name="Changes" comment="" />
+    <list default="true" id="59edf26e-7f18-43b8-af22-c15de32aa5a7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/about.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/axios/about.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/axios/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/homepage.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/axios/homepage.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/portfolio.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/axios/portfolio.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/action-creators/about/about.thunks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/action-creators/about/about.thunks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/action-creators/homepage/homepage.thunks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/action-creators/homepage/homepage.thunks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/action-creators/portfolio/portfolio.thunks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/action-creators/portfolio/portfolio.thunks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +113,7 @@
       <workItem from="1645348128505" duration="22842000" />
       <workItem from="1645376709569" duration="740000" />
       <workItem from="1645388649163" duration="358000" />
-      <workItem from="1645435470654" duration="295000" />
+      <workItem from="1645435470654" duration="1616000" />
     </task>
     <servers />
   </component>

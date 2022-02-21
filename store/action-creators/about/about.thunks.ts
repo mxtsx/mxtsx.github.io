@@ -1,6 +1,6 @@
 import {AboutDispatchType, IAboutText} from "../../../types/about.types";
 import {aboutActions} from "./about.action-creators";
-import {aboutApi} from "../../../api/about.api";
+import {aboutApi} from "../../../axios/about.api";
 
 export const getAboutText = () => async (dispatch: AboutDispatchType) => {
     try {

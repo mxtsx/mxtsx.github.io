@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59edf26e-7f18-43b8-af22-c15de32aa5a7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/store/reducers/header/header.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/reducers/header/header.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axios/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/axios/api.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +103,7 @@
       <workItem from="1645348128505" duration="22842000" />
       <workItem from="1645376709569" duration="740000" />
       <workItem from="1645388649163" duration="358000" />
-      <workItem from="1645435470654" duration="1828000" />
+      <workItem from="1645435470654" duration="2551000" />
     </task>
     <servers />
   </component>

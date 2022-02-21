@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59edf26e-7f18-43b8-af22-c15de32aa5a7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/portfolio/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/portfolio/index.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="59edf26e-7f18-43b8-af22-c15de32aa5a7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -104,6 +101,7 @@
       <workItem from="1645348128505" duration="22842000" />
       <workItem from="1645376709569" duration="740000" />
       <workItem from="1645388649163" duration="358000" />
+      <workItem from="1645435470654" duration="295000" />
     </task>
     <servers />
   </component>

@@ -59,11 +59,6 @@ const headerReducer = (state = headerInitialState, action: HeaderActionsType): H
                 ...state,
                 selectPage: action.payload.page
             }
-        case HeaderEnums.SET_IS_LOADING:
-            return {
-                ...state,
-                isLoading: action.payload.isLoading
-            }
         default:
             return state
     }

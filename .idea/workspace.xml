@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59edf26e-7f18-43b8-af22-c15de32aa5a7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/axios/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/axios/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axios/about.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/about.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axios/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axios/homepage.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/homepage.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axios/portfolio.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/portfolio.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/homepage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/homepage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/action-creators/about/about.thunks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/action-creators/about/about.thunks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/action-creators/homepage/homepage.thunks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/action-creators/homepage/homepage.thunks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/action-creators/portfolio/portfolio.thunks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/store/action-creators/portfolio/portfolio.thunks.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,23 +40,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/react/git/mxtsx.github.io-old&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\react\\git\\mxtsx.github.io-new\\node_modules\\prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\WebStorm\\WebStorm 221.4165.163\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/react/git/nextjs-caravan-app/api/api.ts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "D:\\react\\git\\mxtsx.github.io-new\\node_modules\\prettier",
+    "ts.external.directory.path": "D:\\WebStorm\\WebStorm 221.4165.163\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -103,7 +111,7 @@
       <workItem from="1645348128505" duration="22842000" />
       <workItem from="1645376709569" duration="740000" />
       <workItem from="1645388649163" duration="358000" />
-      <workItem from="1645435470654" duration="2551000" />
+      <workItem from="1645435470654" duration="6768000" />
     </task>
     <servers />
   </component>

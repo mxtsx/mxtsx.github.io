@@ -1,5 +1,5 @@
 import React from 'react';
-import {GetStaticProps, NextPage} from "next";
+import {GetServerSideProps, NextPage} from "next";
 import {MainLayout} from "../../layouts/main.layout";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import Link from "next/link";
@@ -70,9 +70,9 @@ const Portfolio: NextPage<RootState> = React.memo(() => {
 
 export default Portfolio
 
-export const getStaticProps: GetStaticProps = wrapper.getStaticProps(store => async () => {
+export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(store => async (context) => {
     const dispatch = store.dispatch as NextThunkDispatch
-    await dispatch(getPortfolioInformation());
+    await dispatch(getPortfolioInformation(context.req.headers.host as string));
     return {
         props: {}
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {GetStaticProps, NextPage} from "next";
+import {GetServerSideProps, GetStaticProps, NextPage} from "next";
 import {MainLayout} from "../../layouts/main.layout";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {Spinner} from "../../components/spinner.component";
@@ -26,9 +26,9 @@ export const About: NextPage<RootState> = React.memo(() => {
 
 export default About
 
-export const getStaticProps: GetStaticProps = wrapper.getStaticProps(store => async () => {
+export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(store => async (context) => {
     const dispatch = store.dispatch as NextThunkDispatch
-    await dispatch(getAboutText());
+    await dispatch(getAboutText(context.req.headers.host as string));
     return {
         props: {}
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import {MainLayout} from "../../layouts/main.layout";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
-import {GetStaticProps, NextPage} from "next";
+import {GetServerSideProps, NextPage} from "next";
 import {isMailUtil} from "../../utils/isMail.util";
 import {IContact} from "../../types/contact.types";
 import {Spinner} from "../../components/spinner.component";
@@ -41,9 +41,9 @@ const Homepage: NextPage<RootState> = React.memo(() => {
 
 export default Homepage
 
-export const getStaticProps: GetStaticProps = wrapper.getStaticProps(store => async () => {
+export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(store => async (context) => {
     const dispatch = store.dispatch as NextThunkDispatch
-    await dispatch(getHomepageInformation());
+    await dispatch(getHomepageInformation(context.req.headers.host as string));
     return {
         props: {}
     }

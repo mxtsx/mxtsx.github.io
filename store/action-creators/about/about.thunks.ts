@@ -1,10 +1,10 @@
 import {AboutDispatchType, IAboutText} from "../../../types/about.types";
 import {aboutActions} from "./about.action-creators";
-import {aboutApi} from "../../../axios/about.api";
+import {aboutApi} from "../../../api/about.api";
 
-export const getAboutText = () => async (dispatch: AboutDispatchType) => {
+export const getAboutText = (host: string) => async (dispatch: AboutDispatchType) => {
     try {
-        const res = await aboutApi.getAbout()
+        const res = await aboutApi.getAbout(host)
         if(res.status === 200) {
             dispatch(aboutActions.aboutInformationGot(res.data))
         }

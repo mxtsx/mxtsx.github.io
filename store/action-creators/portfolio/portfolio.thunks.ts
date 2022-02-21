@@ -1,6 +1,6 @@
 import {PortfolioDispatchType} from "../../../types/portfolio.types";
 import {portfolioActions} from "./portfolio.action-creators";
-import {portfolioApi} from "../../../api/portfolio.api";
+import {portfolioApi} from "../../../axios/portfolio.api";
 
 export const getPortfolioInformation = (host: string) => async (dispatch: PortfolioDispatchType) => {
     try {

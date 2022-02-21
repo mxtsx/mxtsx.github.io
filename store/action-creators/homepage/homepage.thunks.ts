@@ -1,6 +1,6 @@
 import {HomepageDispatchType} from "../../../types/homepage.types";
 import {homepageActions} from "./homepage.action-creators";
-import {homepageApi} from "../../../api/homepage.api";
+import {homepageApi} from "../../../axios/homepage.api";
 
 export const getHomepageInformation = (host: string) => async (dispatch: HomepageDispatchType) => {
     try {

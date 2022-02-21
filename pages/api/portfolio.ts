@@ -22,7 +22,7 @@ export default function handler(
         cz: "Tato stránka byla vytvořena s použitím NextJS, React, Redux, Typescript a Tailwind.",
         hr: "Ova stranica je stvorena pomoću NextJS, React, Redux, Typescript i Tailwind."
       },
-      url: "https://mxtsx.github.io",
+      url: "https://mxtsx.vercel.app",
       codeUrl: 'https://github.com/mxtsx/mxtsx.github.io',
       screenshots: [
           '/mxtsx.github.io-new/main_page.png',

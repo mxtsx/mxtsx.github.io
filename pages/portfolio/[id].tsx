@@ -3,6 +3,9 @@ import {MainLayout} from "../../layouts/main.layout";
 import {useRouter} from "next/router";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {screenshotName} from "../../utils/screenshot-name.util";
+import {GetServerSideProps} from "next";
+import {NextThunkDispatch, wrapper} from "../../store/store";
+import {getPortfolioInformation} from "../../store/action-creators/portfolio/portfolio.thunks";
 
 const Project: React.FC = React.memo(() => {
     const router = useRouter()
@@ -44,3 +47,11 @@ const Project: React.FC = React.memo(() => {
 })
 
 export default Project
+
+export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps(store => async (context) => {
+    const dispatch = store.dispatch as NextThunkDispatch
+    await dispatch(getPortfolioInformation(context.req.headers.host as string));
+    return {
+        props: {}
+    }
+});
